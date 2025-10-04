@@ -1,0 +1,70 @@
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Typography */
+  --font-serif: 'Playfair Display', serif; /* For elegant titles */
+  --font-sans: 'Montserrat', sans-serif; /* For clean body text */
+
+  /* Color Palette */
+  --color-primary: #1a1a1a;   /* Deep Charcoal for titles and dark text */
+  --color-secondary: #f8f8f8; /* Off-white for backgrounds (plenty of whitespace) */
+  --color-text-dark: #333333; /* Dark grey for body text */
+  --color-accent: #8b4513;    /* Muted Saddle Brown for elegant highlights */
+
+  /* Spacing */
+  --padding-page: 4rem;
+  --max-width: 1400px;
+}
+
+/* Reset and Global Box Model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Base Body and HTML setup */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  background-color: var(--color-secondary);
+}
+
+/* Base Typography */
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text-dark);
+}
+
+/* Headings: Editorial Look */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+h1 { font-size: clamp(3rem, 7vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Main Layout Wrapper */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}

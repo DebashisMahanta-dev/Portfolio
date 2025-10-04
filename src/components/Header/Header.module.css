@@ -1,0 +1,60 @@
+/* src/components/Header/Header.module.css */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem var(--padding-page);
+  background-color: var(--color-secondary);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navContainer {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav{
+    position: relative;
+    z-index: 1;
+}
+.logo a {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 40px
+}
+
+.nav li {
+  margin-left: 2rem;
+}
+
+.nav a {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+nav.before .active-element{
+    transform: rotateY(180deg);
+}
+.nav a:hover,
+.nav a.active {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}

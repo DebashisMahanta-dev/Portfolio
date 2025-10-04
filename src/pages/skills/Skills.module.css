@@ -1,0 +1,105 @@
+/* Container */
+.container {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--color-text, #111);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+.lead {
+  margin: 0;
+  color: var(--color-muted, #666);
+}
+
+/* Grid of skill groups */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+}
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.card {
+  background: var(--card-bg, #fff);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 4px rgba(10,10,10,0.04);
+}
+.cardTitle {
+  font-size: 1.125rem;
+  margin: 0 0 0.75rem;
+  color: var(--color-primary, #111);
+}
+
+/* Skill list */
+.skillList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.875rem;
+}
+.skillItem {
+  display: block;
+}
+
+/* Row with name + percent */
+.skillRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.375rem;
+}
+.skillName {
+  font-size: 0.95rem;
+  /* Use a readable text color; the project's --color-secondary is a light background, so don't use it here */
+  color: var(--color-text-dark, #111);
+}
+.skillLevel {
+  font-size: 0.85rem;
+  color: var(--color-muted, #666);
+  min-width: 36px;
+  text-align: right;
+}
+
+/* Progress bar */
+.progress {
+  background: linear-gradient(90deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progressValue {
+  height: 100%;
+  background: linear-gradient(90deg, #6a9eff, #4a6ef6);
+  border-radius: 999px;
+  transition: width 700ms cubic-bezier(.2,.9,.2,1);
+  min-width: 2%;
+}
+
+/* Small accessibility tweak */
+.progress[role="progressbar"] {
+  outline: none;
+}
+

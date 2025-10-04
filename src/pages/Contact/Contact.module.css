@@ -1,0 +1,50 @@
+.container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.heading {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.lead {
+  color: rgba(0,0,0,0.7);
+  margin-bottom: 1.5rem;
+}
+.form {
+  display: grid;
+  gap: 0.75rem;
+}
+.label {
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+.input, .textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.textarea { resize: vertical; }
+.error { color: #b00020; font-size: 0.9rem; margin-top: 0.25rem; }
+.actions { margin-top: 1rem; }
+.button {
+  background: #0b1020;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.button[disabled] { opacity: 0.6; cursor: not-allowed; }
+.success {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #e6ffed;
+  border: 1px solid #b4f0c9;
+  color: #065f46;
+  border-radius: 6px;
+}
+.visuallyHidden { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
